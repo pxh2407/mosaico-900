@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mosaico &lsquo;900 — Incontri del venerdì LUTE Milazzo 2026-27</title>
+<meta name="description" content="Mosaico '900: gli incontri del venerdì della LUTE di Milazzo, dal 9 ottobre 2026 al 26 marzo 2027.">
+<link rel="icon" href="img/logo-lute.png">
+<!-- anteprima del collegamento su WhatsApp, Facebook, email -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="LUTE Milazzo">
+<meta property="og:title" content="Mosaico ‘900 — Incontri del venerdì 2026-27">
+<meta property="og:description" content="Ventiquattro incontri del venerdì, dal 9 ottobre 2026 al 26 marzo 2027.">
+<meta property="og:url" content="https://pxh2407.github.io/mosaico-900/">
+<meta property="og:image" content="https://pxh2407.github.io/mosaico-900/anteprima.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Riquadro verde con il titolo Mosaico '900 e quattro illustrazioni degli incontri">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --verde:#1f6f5c;
+  --verde-scuro:#144a3d;
+  --verde-chiaro:#e6f2ee;
+  --oro:#b8863b;
+  --oro-chiaro:#fbf3e4;
+  --crema:#fbf9f4;
+  --carta:#ffffff;
+  --testo:#22302c;
+  --testo-tenue:#5a6b66;
+  --bordo:#dfe6e3;
+  --ombra:0 6px 24px rgba(20,74,61,.10);
+  --raggio:18px;
+  --base:19px;
+}
+html[data-contrasto="alto"]{
+  --verde:#004d3d; --verde-scuro:#00301f; --verde-chiaro:#ffffff;
+  --oro:#8a5c00; --oro-chiaro:#ffffff;
+  --crema:#ffffff; --carta:#ffffff;
+  --testo:#000000; --testo-tenue:#1a1a1a; --bordo:#000000;
+  --ombra:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:100px}
+body{
+  margin:0; background:var(--crema); color:var(--testo);
+  font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  font-size:var(--base); line-height:1.6;
+}
+img{max-width:100%; display:block}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif; line-height:1.25; margin:0 0 .4em}
+h2{font-size:2em; color:var(--verde-scuro)}
+h3{font-size:1.3em; color:var(--verde-scuro)}
+p{margin:0 0 1em}
+.wrap{max-width:1160px; margin:0 auto; padding:0 22px}
+.sezione{padding:64px 0}
+.occhiello{
+  display:inline-block; font-size:.78em; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--oro); font-weight:700; margin-bottom:10px;
+}
+
+/* ---------- barra ---------- */
+header.barra{
+  position:sticky; top:0; z-index:50; background:rgba(255,255,255,.97);
+  backdrop-filter:blur(6px); border-bottom:1px solid var(--bordo);
+}
+.barra .wrap{display:flex; align-items:center; gap:18px; min-height:72px; flex-wrap:wrap}
+.marchio{display:flex; align-items:center; gap:14px; font-weight:700; color:var(--verde-scuro)}
+.marchio img{height:42px; width:auto}
+.strumenti{display:flex; gap:6px; align-items:center; margin-left:auto}
+.strumenti button{
+  border:1px solid var(--bordo); background:var(--carta); color:var(--verde-scuro);
+  border-radius:10px; padding:7px 11px; font-size:.95em; font-weight:700; cursor:pointer;
+}
+.strumenti button:hover{background:var(--verde-chiaro)}
+
+/* ---------- copertina ---------- */
+.copertina{background:var(--verde-scuro); color:#fff}
+.copertina .wrap{padding-top:52px; padding-bottom:56px; text-align:center}
+.copertina .logo-grande{height:74px; width:auto; margin:0 auto 20px; filter:brightness(0) invert(1); opacity:.95}
+.copertina h1{font-size:2.6em; color:#fff; letter-spacing:.02em; margin-bottom:.15em}
+.copertina .sottotitolo{font-size:1.15em; opacity:.92; margin:0 0 18px}
+.orario{
+  display:inline-block; margin-top:8px; background:var(--oro); color:#25190a;
+  border-radius:999px; padding:12px 28px; font-weight:800; font-size:1.1em; letter-spacing:.02em;
+}
+
+/* ---------- prossimo incontro ---------- */
+.prossimo{
+  background:var(--oro-chiaro); border:1px solid #e8d5ae; border-radius:var(--raggio);
+  padding:22px 26px; margin:0 0 34px; display:flex; gap:18px; align-items:center; flex-wrap:wrap;
+}
+.prossimo .etichetta{
+  background:var(--oro); color:#25190a; border-radius:999px; padding:6px 16px;
+  font-weight:800; font-size:.85em; letter-spacing:.08em; text-transform:uppercase;
+}
+.prossimo .cosa{font-family:Georgia,serif; font-size:1.25em; color:var(--verde-scuro); font-weight:700}
+.prossimo .chi{color:var(--testo-tenue)}
+
+/* ---------- ricerca ---------- */
+.cerca{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin:0 0 30px}
+.cerca input{
+  flex:1; min-width:240px; font:inherit; padding:13px 18px;
+  border:1px solid var(--bordo); border-radius:12px; background:var(--carta); color:var(--testo);
+}
+.cerca input:focus{outline:3px solid var(--verde-chiaro); border-color:var(--verde)}
+.cerca .conteggio{color:var(--testo-tenue); font-size:.95em}
+
+/* ---------- schede degli incontri ---------- */
+.griglia{display:grid; gap:26px; grid-template-columns:repeat(3,1fr)}
+@media(max-width:1000px){.griglia{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.griglia{grid-template-columns:1fr}}
+.incontro{
+  background:var(--carta); border:1px solid var(--bordo); border-radius:var(--raggio);
+  overflow:hidden; box-shadow:var(--ombra); display:flex; flex-direction:column;
+}
+.incontro.evidenza{border-color:var(--oro); box-shadow:0 8px 28px rgba(184,134,59,.28)}
+.incontro .immagine{
+  height:210px; overflow:hidden; position:relative; width:100%;
+  background:linear-gradient(140deg,var(--verde-scuro),var(--verde));
+  display:grid; place-items:center;
+  border:none; padding:0; margin:0; font:inherit; cursor:zoom-in;
+}
+.incontro .immagine:focus-visible{outline:4px solid var(--oro); outline-offset:-4px}
+.incontro .immagine .lente{
+  position:absolute; right:12px; bottom:12px; z-index:2; opacity:0; transition:opacity .15s;
+  background:rgba(20,74,61,.88); color:#fff; border-radius:999px; padding:6px 12px;
+  font-size:.8em; font-weight:700;
+}
+.incontro .immagine:hover .lente,.incontro .immagine:focus .lente{opacity:1}
+.incontro .immagine img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0}
+.incontro .iniziale{
+  font-family:Georgia,serif; font-size:3.4em; color:rgba(255,255,255,.55); font-weight:700;
+}
+.incontro .numero{
+  position:absolute; top:14px; left:14px; width:40px; height:40px; border-radius:50%;
+  background:rgba(20,74,61,.92); color:#fff; display:grid; place-items:center;
+  font-family:Georgia,serif; font-weight:700; font-size:1.05em; z-index:2;
+}
+.incontro .testo{padding:22px 26px 26px; display:flex; flex-direction:column; flex:1}
+.incontro .data{
+  font-weight:800; color:var(--verde); letter-spacing:.04em; font-size:.95em; margin-bottom:8px;
+  text-transform:uppercase;
+}
+.incontro h3{margin-bottom:16px; font-size:1.2em}
+.incontro .dati{margin-top:auto; display:flex; gap:10px; flex-wrap:wrap}
+.dato{
+  display:inline-flex; align-items:center; gap:7px; background:var(--verde-chiaro);
+  color:var(--verde-scuro); border-radius:999px; padding:7px 15px; font-size:.9em; font-weight:700;
+}
+.dato.oro{background:var(--oro-chiaro); color:#7a5a1c; border:1px solid #e8d5ae}
+
+/* ---------- riserva ---------- */
+.riserva{background:var(--verde-chiaro)}
+.elenco-riserva{list-style:none; padding:0; margin:22px 0 0; display:grid; gap:14px; grid-template-columns:repeat(2,1fr)}
+@media(max-width:680px){.elenco-riserva{grid-template-columns:1fr}}
+.elenco-riserva li{
+  background:var(--carta); border:1px solid var(--bordo); border-radius:14px;
+  padding:16px 20px; font-family:Georgia,serif; font-size:1.1em; color:var(--verde-scuro);
+}
+.elenco-riserva li::before{content:"◆ "; color:var(--oro)}
+
+.niente{padding:26px; text-align:center; color:var(--testo-tenue)}
+
+/* ---------- galleria a tutto schermo ---------- */
+#galleria{position:fixed; inset:0; z-index:80; display:none; background:#0c0c0c; color:#fff; flex-direction:column}
+#galleria.aperta{display:flex}
+.g-alto{display:flex; justify-content:space-between; align-items:center; padding:14px 20px; gap:16px; flex-shrink:0}
+.g-posizione{font-size:1em; color:#c9c9c9}
+.g-chiudi{
+  background:none; border:2px solid #6a6a6a; color:#fff; font:inherit; font-weight:700;
+  padding:8px 20px; border-radius:9px; cursor:pointer;
+}
+.g-chiudi:hover{border-color:#fff}
+.g-centro{flex:1; min-height:0; display:flex; align-items:center; gap:12px; padding:0 12px}
+.g-freccia{
+  flex-shrink:0; width:62px; height:92px; background:rgba(255,255,255,.10);
+  border:none; color:#fff; font-size:2em; line-height:1; border-radius:12px; cursor:pointer;
+}
+.g-freccia:hover{background:rgba(255,255,255,.22)}
+.g-freccia:disabled{opacity:.25; cursor:default}
+.g-cornice{flex:1; min-width:0; min-height:0; display:flex; align-items:center; justify-content:center}
+#gImg{max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; border-radius:10px}
+.g-basso{padding:16px 24px 26px; text-align:center; flex-shrink:0}
+.g-titolo{font-family:Georgia,serif; font-size:1.6em}
+.g-dati{color:#c9c9c9; margin-top:6px}
+@media(max-width:560px){
+  .g-freccia{width:46px; height:74px; font-size:1.5em}
+  .g-titolo{font-size:1.25em}
+}
+
+footer{background:var(--verde-scuro); color:#dfeae6; padding:46px 0 38px; text-align:center}
+footer img{height:60px; width:auto; margin:0 auto 16px; filter:brightness(0) invert(1); opacity:.9}
+footer .fine{border-top:1px solid rgba(255,255,255,.2); margin-top:24px; padding-top:18px; font-size:.88em; opacity:.85}
+
+.sali{
+  position:fixed; right:22px; bottom:22px; z-index:60; width:54px; height:54px; border-radius:50%;
+  border:none; background:var(--verde); color:#fff; font-size:1.4em; cursor:pointer; box-shadow:var(--ombra);
+  display:none;
+}
+.sali.visibile{display:block}
+
+@media print{
+  header.barra,.sali,.strumenti,.cerca,.prossimo{display:none !important}
+  body{font-size:11pt; background:#fff}
+  .sezione{padding:14px 0}
+  .griglia{grid-template-columns:repeat(2,1fr); gap:12px}
+  .incontro{break-inside:avoid; box-shadow:none}
+  .incontro .immagine{height:100px}
+  .copertina{background:#fff; color:#000}
+  .copertina h1,.copertina .sottotitolo{color:#000}
+  .copertina .logo-grande{filter:none}
+  footer{background:#fff; color:#000}
+  footer img{filter:none}
+}
+</style>
+</head>
+<body>
+
+<header class="barra">
+  <div class="wrap">
+    <div class="marchio"><img src="img/logo-lute.png" alt="Logo LUTE"> Mosaico &lsquo;900 — venerdì 2026-27</div>
+    <div class="strumenti">
+      <button type="button" id="testoMeno" title="Riduci il testo" aria-label="Riduci la dimensione del testo">A−</button>
+      <button type="button" id="testoPiu" title="Ingrandisci il testo" aria-label="Ingrandisci la dimensione del testo">A+</button>
+      <button type="button" id="contrasto" title="Alto contrasto" aria-label="Attiva o disattiva l'alto contrasto">◐</button>
+      <button type="button" id="stampa" title="Stampa" aria-label="Stampa la pagina">🖨</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ COPERTINA ============ -->
+<section class="copertina">
+  <div class="wrap">
+    <img class="logo-grande" src="img/logo-lute.png" alt="Logo LUTE">
+    <h1>MOSAICO &lsquo;900</h1>
+    <p class="sottotitolo">DATE — INCONTRI VENERDI&rsquo; — 2026/27</p>
+    <div class="orario">DAL 9 OTTOBRE 2026 AL 26 MARZO 2027</div>
+  </div>
+</section>
+
+<!-- ============ PROGRAMMA ============ -->
+<section class="sezione" id="programma">
+  <div class="wrap">
+    <span class="occhiello">Il calendario</span>
+    <h2>Gli incontri, venerdì per venerdì</h2>
+    <p style="max-width:60ch">Clicca una foto per vederla a tutto schermo e scorrere tutte le immagini.</p>
+
+    <div id="prossimo" class="prossimo" hidden></div>
+
+    <div class="cerca">
+      <input type="search" id="filtro" placeholder="Cerca un argomento o un relatore…" aria-label="Cerca un argomento o un relatore">
+      <span class="conteggio" id="conteggio"></span>
+    </div>
+
+    <div class="griglia" id="griglia"></div>
+    <p class="niente" id="niente" hidden>Nessun incontro corrisponde alla ricerca.</p>
+  </div>
+</section>
+
+<!-- ============ ARGOMENTI DI RISERVA ============ -->
+<section class="sezione riserva" id="riserva">
+  <div class="wrap">
+    <span class="occhiello">In più</span>
+    <h2>Argomenti di riserva</h2>
+    <ul class="elenco-riserva" id="elencoRiserva"></ul>
+  </div>
+</section>
+
+<!-- ============ GALLERIA A TUTTO SCHERMO ============ -->
+<div id="galleria" role="dialog" aria-modal="true" aria-label="Immagine dell'incontro">
+  <div class="g-alto">
+    <span class="g-posizione" id="gPosizione"></span>
+    <button class="g-chiudi" id="gChiudi" type="button">Chiudi ✕</button>
+  </div>
+  <div class="g-centro">
+    <button class="g-freccia" id="gPrec" type="button" aria-label="Immagine precedente">&#8249;</button>
+    <div class="g-cornice"><img id="gImg" alt=""></div>
+    <button class="g-freccia" id="gSucc" type="button" aria-label="Immagine successiva">&#8250;</button>
+  </div>
+  <div class="g-basso">
+    <div class="g-titolo" id="gTitolo"></div>
+    <div class="g-dati" id="gDati"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo-lute.png" alt="Logo LUTE">
+    <p style="margin:0">MOSAICO &lsquo;900 — INCONTRI DEL VENERDI&rsquo;<br>LUTE MILAZZO 2026/27</p>
+    <div class="fine">Programma tratto dal documento &ldquo;DATE - INCONTRI VENERDI&rsquo; - 2026/27&rdquo;.</div>
+  </div>
+</footer>
+
+<button class="sali" id="sali" title="Torna all'inizio" aria-label="Torna all'inizio">↑</button>
+
+<script>
+/* ===========================================================
+   IL PROGRAMMA
+   Per correggere un incontro basta modificare la sua riga qui sotto:
+   data (giorno e mese), argomento, relatore, immagine (file dentro img/).
+   Se l'immagine non c'è ancora, la scheda mostra un riquadro verde
+   con l'iniziale: la pagina funziona lo stesso.
+   =========================================================== */
+var INCONTRI = [
+  { data:"2026-10-09", giorno:"9 ottobre 2026",   titolo:"Vittorini. Il Politecnico",  relatore:"Filippo Russo",        img:"01-vittorini.jpg" },
+  { data:"2026-10-16", giorno:"16 ottobre 2026",  titolo:"Carlo Levi",                 relatore:"Alessandro Di Bella",  img:"02-carlo-levi.jpg" },
+  { data:"2026-10-23", giorno:"23 ottobre 2026",  titolo:"Sandro Pertini",             relatore:"Francesco Gitto",      img:"03-pertini.jpg" },
+  { data:"2026-10-30", giorno:"30 ottobre 2026",  titolo:"Alcide De Gasperi",          relatore:"Fabio Milazzo",        img:"04-de-gasperi.jpg" },
+  { data:"2026-11-06", giorno:"6 novembre 2026",  titolo:"Palmiro Togliatti",          relatore:"Fabio Milazzo",        img:"05-togliatti.jpg" },
+  { data:"2026-11-13", giorno:"13 novembre 2026", titolo:"Pietro Nenni",               relatore:"Nino Nastasi",         img:"06-nenni.jpg" },
+  { data:"2026-11-20", giorno:"20 novembre 2026", titolo:"Il centrismo",               relatore:"Fabio Milazzo",        img:"07-centrismo.jpg" },
+  { data:"2026-11-27", giorno:"27 novembre 2026", titolo:"Pietro Calamandri",          relatore:"Fabio Milazzo",        img:"08-calamandrei.jpg" },
+  { data:"2026-12-04", giorno:"4 dicembre 2026",  titolo:"La marcia dei quarantamila", relatore:"Franco Garufi",        img:"09-marcia-quarantamila.jpg" },
+  { data:"2026-12-11", giorno:"11 dicembre 2026", titolo:"I ribelli della Chiesa",     relatore:"Oriana Scampitelli",   img:"10-ribelli-chiesa.jpg" },
+  { data:"2026-12-18", giorno:"18 dicembre 2026", titolo:"Enrico Berlinguer",          relatore:"Guglielmo Maneri",     img:"11-berlinguer.jpg" },
+  { data:"2027-01-15", giorno:"15 gennaio 2027",  titolo:"Luchino Visconti",           relatore:"Antonio Nunzio Isgrò", img:"12-visconti.jpg" },
+  { data:"2027-01-22", giorno:"22 gennaio 2027",  titolo:"Federico Fellini",           relatore:"Antonio Nunzio Isgrò", img:"13-fellini.jpg" },
+  { data:"2027-01-29", giorno:"29 gennaio 2027",  titolo:"Adriano Olivetti",           relatore:"Santo Laganà",         img:"14-olivetti.jpg" },
+  { data:"2027-02-05", giorno:"5 febbraio 2027",  titolo:"Adriana Zarri",              relatore:"Nella Barbera",        img:"15-zarri.jpg" },
+  { data:"2027-02-12", giorno:"12 febbraio 2027", titolo:"Oriana Fallaci",             relatore:"Vito Riggi",           img:"16-fallaci.jpg" },
+  { data:"2027-02-19", giorno:"19 febbraio 2027", titolo:"Il Grande Torino",           relatore:"Fabrizio Scibilia",    img:"17-grande-torino.jpg" },
+  { data:"2027-02-26", giorno:"26 febbraio 2027", titolo:"Gino Bartali",               relatore:"Fabrizio Scibilia",    img:"18-bartali.jpg" },
+  { data:"2027-03-05", giorno:"5 marzo 2027",     titolo:"Le sorelle Fontana",         relatore:"Rosetta Lo Vano",      img:"19-sorelle-fontana.jpg" },
+  { data:"2027-03-12", giorno:"12 marzo 2027",    titolo:"Guglielmo Marconi",          relatore:"Giuseppe De Luca",     img:"20-marconi.jpg" },
+  { data:"2027-03-19", giorno:"19 marzo 2027",    titolo:"Sergio Endrigo",             relatore:"Gianni De Luca",       img:"21-endrigo.jpg" },
+  { data:"2027-03-26", giorno:"26 marzo 2027",    titolo:"Giuseppe Di Vittorio",       relatore:"Claudio Graziano",     img:"22-di-vittorio.jpg" }
+];
+
+/* Argomenti di riserva (senza data) */
+var RISERVA = [
+  "Lo spareggio Inter-Bologna",
+  "Il caso Montesi",
+  "Il caso Fenaroli",
+  "Guglielmo Giannini"
+];
+
+/* ----------------------------------------------------------- */
+function testo(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+var griglia = document.getElementById('griglia');
+var niente  = document.getElementById('niente');
+var conteggio = document.getElementById('conteggio');
+
+var visibili = [];   // gli incontri mostrati ora: sono quelli che si scorrono nella galleria
+
+function disegna(elenco){
+  visibili = elenco;
+  griglia.innerHTML = elenco.map(function(inc, posto){
+    var n = INCONTRI.indexOf(inc) + 1;
+    return '<article class="incontro' + (inc.evidenza ? ' evidenza' : '') + '">' +
+             '<button type="button" class="immagine" data-posto="' + posto + '" ' +
+                     'aria-label="Vedi a tutto schermo l\'immagine di ' + testo(inc.titolo) + '">' +
+               '<span class="iniziale" aria-hidden="true">' + testo(inc.titolo.charAt(0)) + '</span>' +
+               '<img src="img/' + testo(inc.img) + '" alt="Immagine per l\'incontro su ' + testo(inc.titolo) + '" ' +
+                    'loading="lazy" onerror="this.style.display=\'none\'">' +
+               '<span class="numero">' + n + '</span>' +
+               '<span class="lente">🔍 ingrandisci</span>' +
+             '</button>' +
+             '<div class="testo">' +
+               '<div class="data">📅 Venerdì ' + testo(inc.giorno) + '</div>' +
+               '<h3>' + testo(inc.titolo) + '</h3>' +
+               '<div class="dati"><span class="dato oro">🎙 ' + testo(inc.relatore) + '</span></div>' +
+             '</div>' +
+           '</article>';
+  }).join('');
+  niente.hidden = elenco.length > 0;
+  conteggio.textContent = elenco.length + (elenco.length === 1 ? ' incontro' : ' incontri');
+
+  var bottoni = griglia.querySelectorAll('.immagine');
+  for (var i = 0; i < bottoni.length; i++){
+    bottoni[i].onclick = function(){ apri(parseInt(this.getAttribute('data-posto'), 10)); };
+  }
+}
+
+/* ---------- galleria a tutto schermo ---------- */
+var galleria = document.getElementById('galleria');
+var posizione = 0;
+
+function mostra(){
+  var inc = visibili[posizione];
+  var gImg = document.getElementById('gImg');
+  gImg.src = 'img/' + inc.img;
+  gImg.alt = 'Immagine per l\'incontro su ' + inc.titolo;
+  document.getElementById('gTitolo').textContent = inc.titolo;
+  document.getElementById('gDati').textContent = 'Venerdì ' + inc.giorno + '  •  ' + inc.relatore;
+  document.getElementById('gPosizione').textContent = (posizione + 1) + ' di ' + visibili.length;
+  document.getElementById('gPrec').disabled = posizione === 0;
+  document.getElementById('gSucc').disabled = posizione === visibili.length - 1;
+}
+function apri(posto){
+  posizione = posto;
+  mostra();
+  galleria.classList.add('aperta');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('gChiudi').focus();
+}
+function chiudi(){ galleria.classList.remove('aperta'); document.body.style.overflow = ''; }
+function scorri(passo){
+  var n = posizione + passo;
+  if (n < 0 || n >= visibili.length) return;
+  posizione = n; mostra();
+}
+
+document.getElementById('gChiudi').onclick = chiudi;
+document.getElementById('gPrec').onclick = function(){ scorri(-1); };
+document.getElementById('gSucc').onclick = function(){ scorri(1); };
+galleria.addEventListener('click', function(e){ if (e.target === galleria) chiudi(); });
+document.addEventListener('keydown', function(e){
+  if (!galleria.classList.contains('aperta')) return;
+  if (e.key === 'Escape')     chiudi();
+  if (e.key === 'ArrowLeft')  scorri(-1);
+  if (e.key === 'ArrowRight') scorri(1);
+});
+
+/* il prossimo incontro in programma */
+(function(){
+  var oggi = new Date(); oggi.setHours(0,0,0,0);
+  var p = null;
+  for (var i = 0; i < INCONTRI.length; i++){
+    var d = new Date(INCONTRI[i].data + 'T00:00:00');
+    if (d >= oggi){ p = INCONTRI[i]; break; }
+  }
+  if (p){
+    p.evidenza = true;
+    var box = document.getElementById('prossimo');
+    box.innerHTML = '<span class="etichetta">Prossimo incontro</span>' +
+                    '<span><span class="cosa">' + testo(p.titolo) + '</span> ' +
+                    '<span class="chi">— venerdì ' + testo(p.giorno) + ', ' + testo(p.relatore) + '</span></span>';
+    box.hidden = false;
+  }
+})();
+
+disegna(INCONTRI);
+
+document.getElementById('elencoRiserva').innerHTML =
+  RISERVA.map(function(r){ return '<li>' + testo(r) + '</li>'; }).join('');
+
+/* ricerca */
+document.getElementById('filtro').addEventListener('input', function(){
+  var q = this.value.trim().toLowerCase();
+  if (!q){ disegna(INCONTRI); return; }
+  disegna(INCONTRI.filter(function(inc){
+    return (inc.titolo + ' ' + inc.relatore + ' ' + inc.giorno).toLowerCase().indexOf(q) >= 0;
+  }));
+});
+
+/* le preferenze si salvano nel browser; se non è possibile, la pagina funziona lo stesso */
+function leggiPref(c){ try { return localStorage.getItem(c); } catch(e){ return null; } }
+function scriviPref(c,v){ try { localStorage.setItem(c,v); } catch(e){} }
+function togliPref(c){ try { localStorage.removeItem(c); } catch(e){} }
+
+(function(){
+  var radice = document.documentElement;
+  var base = parseInt(leggiPref('mos_testo') || '19', 10);
+  if (isNaN(base)) base = 19;
+  function applica(){ radice.style.setProperty('--base', base + 'px'); scriviPref('mos_testo', base); }
+  applica();
+  document.getElementById('testoPiu').onclick  = function(){ base = Math.min(base + 2, 27); applica(); };
+  document.getElementById('testoMeno').onclick = function(){ base = Math.max(base - 2, 15); applica(); };
+
+  if (leggiPref('mos_contrasto') === 'alto') radice.setAttribute('data-contrasto','alto');
+  document.getElementById('contrasto').onclick = function(){
+    if (radice.getAttribute('data-contrasto') === 'alto'){ radice.removeAttribute('data-contrasto'); togliPref('mos_contrasto'); }
+    else { radice.setAttribute('data-contrasto','alto'); scriviPref('mos_contrasto','alto'); }
+  };
+  document.getElementById('stampa').onclick = function(){ window.print(); };
+
+  var sali = document.getElementById('sali');
+  window.addEventListener('scroll', function(){ sali.classList.toggle('visibile', window.scrollY > 600); });
+  sali.onclick = function(){ window.scrollTo({ top:0, behavior:'smooth' }); };
+})();
+</script>
+</body>
+</html>
