@@ -154,16 +154,6 @@ header.barra{
 }
 .dato.oro{background:var(--oro-chiaro); color:#7a5a1c; border:1px solid #e8d5ae}
 
-/* ---------- riserva ---------- */
-.riserva{background:var(--verde-chiaro)}
-.elenco-riserva{list-style:none; padding:0; margin:22px 0 0; display:grid; gap:14px; grid-template-columns:repeat(2,1fr)}
-@media(max-width:680px){.elenco-riserva{grid-template-columns:1fr}}
-.elenco-riserva li{
-  background:var(--carta); border:1px solid var(--bordo); border-radius:14px;
-  padding:16px 20px; font-family:Georgia,serif; font-size:1.1em; color:var(--verde-scuro);
-}
-.elenco-riserva li::before{content:"◆ "; color:var(--oro)}
-
 .niente{padding:26px; text-align:center; color:var(--testo-tenue)}
 
 /* ---------- galleria a tutto schermo ---------- */
@@ -262,15 +252,6 @@ footer .fine{border-top:1px solid rgba(255,255,255,.2); margin-top:24px; padding
   </div>
 </section>
 
-<!-- ============ ARGOMENTI DI RISERVA ============ -->
-<section class="sezione riserva" id="riserva">
-  <div class="wrap">
-    <span class="occhiello">In più</span>
-    <h2>Argomenti di riserva</h2>
-    <ul class="elenco-riserva" id="elencoRiserva"></ul>
-  </div>
-</section>
-
 <!-- ============ GALLERIA A TUTTO SCHERMO ============ -->
 <div id="galleria" role="dialog" aria-modal="true" aria-label="Immagine dell'incontro">
   <div class="g-alto">
@@ -331,13 +312,6 @@ var INCONTRI = [
   { data:"2027-03-26", giorno:"26 marzo 2027",    titolo:"Giuseppe Di Vittorio",       relatore:"Claudio Graziano",     img:"22-di-vittorio.jpg" }
 ];
 
-/* Argomenti di riserva (senza data) */
-var RISERVA = [
-  "Lo spareggio Inter-Bologna",
-  "Il caso Montesi",
-  "Il caso Fenaroli",
-  "Guglielmo Giannini"
-];
 
 /* ----------------------------------------------------------- */
 function testo(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
@@ -436,9 +410,6 @@ document.addEventListener('keydown', function(e){
 })();
 
 disegna(INCONTRI);
-
-document.getElementById('elencoRiserva').innerHTML =
-  RISERVA.map(function(r){ return '<li>' + testo(r) + '</li>'; }).join('');
 
 /* ricerca */
 document.getElementById('filtro').addEventListener('input', function(){
