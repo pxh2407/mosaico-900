@@ -9,7 +9,7 @@ Pagina online: https://pxh2407.github.io/mosaico-900/
 
 - `index.html` — tutta l'applicazione (testi, stile e programma in un unico file)
 - `img/` — il logo e le 22 illustrazioni, una per incontro
-- `anteprima.jpg` — l'immagine che compare quando il link si condivide su WhatsApp, Facebook o per email
+- `anteprima-1.jpg` — l'immagine che compare quando il link si condivide su WhatsApp, Facebook o per email
 
 Il calendario si trova in fondo a `index.html`, nell'elenco `INCONTRI`: una riga per
 incontro (data, argomento, relatore, nome dell'immagine). Per correggere qualcosa
